@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:drawable="@android:color/holo_blue_bright"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/newGameFragment"
+        android:title="@string/menuBar_newGame"
+        android:drawable="@android:color/holo_blue_bright"
+        android:icon="@drawable/gameicon"
+        />
+    <item
+        android:id="@+id/helpFragment"
+        android:title="@string/menuBar_help"
+        android:drawable="@android:color/holo_blue_bright"
+        android:icon="@drawable/helpicon"/>
+    <item
+        android:id="@+id/aboutFragment"
+        android:title="@string/menuBar_about"
+        android:drawable="@android:color/holo_blue_bright"
+        android:icon="@drawable/abouticon" />
+</menu>

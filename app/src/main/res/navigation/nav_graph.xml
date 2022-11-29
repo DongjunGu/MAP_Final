@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.mobileapp.finalproject.TitleFragment"
+        android:label="Title"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_newGameFragment"
+            app:destination="@id/newGameFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGameFragment"
+        android:name="com.mobileapp.finalproject.NewGameFragment"
+        android:label="Mode"
+        tools:layout="@layout/fragment_new_game">
+        <action
+            android:id="@+id/action_newGameFragment_to_numOfPlayersFragment"
+            app:destination="@id/numOfPlayersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.mobileapp.finalproject.GameFragment"
+        android:label="Game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="playerNum"
+            app:argType="integer" />
+        <argument
+            android:name="inputNum"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/numOfPlayersFragment"
+        android:name="com.mobileapp.finalproject.NumOfPlayersFragment"
+        android:label="Players"
+        tools:layout="@layout/fragment_num_of_players">
+        <action
+            android:id="@+id/action_numOfPlayersFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.mobileapp.finalproject.ResultFragment"
+        android:label="Result"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="mainPlayerNums"
+            app:argType="integer[]" />
+        <argument
+            android:name="numPlayers"
+            app:argType="integer" />
+        <argument
+            android:name="numNumbers"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_resultFragment_to_scoreboardFragment"
+            app:destination="@id/scoreboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.mobileapp.finalproject.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.mobileapp.finalproject.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/scoreboardFragment"
+        android:name="com.mobileapp.finalproject.ScoreboardFragment"
+        android:label="fragment_scoreboard"
+        tools:layout="@layout/fragment_scoreboard" >
+        <argument
+            android:name="mainPlayerNums"
+            app:argType="integer[]" />
+        <argument
+            android:name="numPlayers"
+            app:argType="integer" />
+        <argument
+            android:name="numNumbers"
+            app:argType="integer" />
+    </fragment>
+</navigation>

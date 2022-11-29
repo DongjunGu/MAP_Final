@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Final Project</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tempString">TEMP</string>
+    <!-- Bottom Menu Bar -->
+    <string name="menuBar_newGame">New Game</string>
+    <string name="menuBar_help">Help</string>
+    <string name="menuBar_about">About</string>
+
+    <!-- Title Fragment -->
+    <string name="newGameButton">New Game</string>
+    <string name="helpButton">Help</string>
+    <!-- Game Fragment - Confirm Screen -->
+    <string name="confirm_sendButton">Next Player</string>
+    <string name="confirm_rejectButton">Redo Numbers</string>
+    <!-- Result Fragment -->
+    <string name="scoreboardButton">Scoreboard</string>
+    <!-- Menu Bar -->
+    <string name="newgame_computer">vs Computer</string>
+    <string name="newgame_player">vs Player</string>
+    <string name="newgame_text">Who do you want to play with?</string>
+    <!-- New game -->
+    <string name="players_text">Select number of Player</string>
+    <string name="players_input">How many inputs?</string>
+    <string name="player_input_hint">Type the number of input</string>
+    <string name="player_number_hint">Type the number players</string>
+    <string name="players_input_max">Max: 10</string>
+    <string name="players_startButton">Start</string>
+    <string name="help_description">1. Choose who you want to play with Computer or Player.\n\n2. Type the number of players you want to play.\n\n3. Type the number of inputs to enter.\n\n4. Type a number from Player 1\n\n5. After modifying or submitting, the next player enters.\n\n6. blah blah blah blah</string>
+    <string name="help_howtoPlay">How To Play?</string>
+    <string name="help_howtoWin">How To Win?</string>
+    <string name="help_winDescription">The player who types the smallest number without duplicate wins!</string>
+    <string name="todo">TODO</string>
+
+</resources>

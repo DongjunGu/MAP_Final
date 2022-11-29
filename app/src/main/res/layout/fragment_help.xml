@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/glance3"
+    tools:context=".HelpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/howToWinT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_howtoWin"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/howToWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/help_winDescription"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/howToPlayT" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="247dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/example3"
+        android:contentDescription="@string/todo" />
+
+
+    <TextView
+        android:id="@+id/howToPlayT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_howtoPlay"
+        android:textSize="25sp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/howToPlay"/>
+
+    <TextView
+        android:id="@+id/howToPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_description"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_margin="30dp" />
+
+    </LinearLayout>
+</ScrollView>
