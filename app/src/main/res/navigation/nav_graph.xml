@@ -40,6 +40,9 @@
         <argument
             android:name="inputNum"
             app:argType="integer" />
+        <argument
+            android:name="playerNames"
+            app:argType="string[]" />
     </fragment>
     <fragment
         android:id="@+id/numOfPlayersFragment"
@@ -47,8 +50,8 @@
         android:label="Players"
         tools:layout="@layout/fragment_num_of_players">
         <action
-            android:id="@+id/action_numOfPlayersFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            android:id="@+id/action_numOfPlayersFragment_to_namesFragment"
+            app:destination="@id/namesFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
@@ -67,6 +70,9 @@
         <action
             android:id="@+id/action_resultFragment_to_scoreboardFragment"
             app:destination="@id/scoreboardFragment" />
+        <argument
+            android:name="playerNames"
+            app:argType="string[]" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -86,6 +92,24 @@
         <argument
             android:name="mainPlayerNums"
             app:argType="integer[]" />
+        <argument
+            android:name="numPlayers"
+            app:argType="integer" />
+        <argument
+            android:name="numNumbers"
+            app:argType="integer" />
+        <argument
+            android:name="playerNames"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/namesFragment"
+        android:name="com.mobileapp.finalproject.NamesFragment"
+        android:label="fragment_names"
+        tools:layout="@layout/fragment_names" >
+        <action
+            android:id="@+id/action_namesFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
         <argument
             android:name="numPlayers"
             app:argType="integer" />

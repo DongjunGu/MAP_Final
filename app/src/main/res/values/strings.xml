@@ -13,6 +13,10 @@
     <!-- Game Fragment - Confirm Screen -->
     <string name="confirm_sendButton">Next Player</string>
     <string name="confirm_rejectButton">Redo Numbers</string>
+    <!-- PlayerName Fragment -->
+    <string name="enterNameText">Enter player name</string>
+    <string name="enterNameTextMain">Please enter the name \nfor each player</string>
+    <string name="confirm">Confirm</string>
     <!-- Result Fragment -->
     <string name="scoreboardButton">Scoreboard</string>
     <!-- Menu Bar -->

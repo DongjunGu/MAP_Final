@@ -41,7 +41,7 @@ public class NumOfPlayersFragment extends Fragment {
                     if (inputInt > 10)
                         Toast.makeText(getActivity(), "Enter 10 or less!", Toast.LENGTH_SHORT).show();
                     else {
-                        NavDirections action = NumOfPlayersFragmentDirections.actionNumOfPlayersFragmentToGameFragment(playerInt, inputInt);
+                        NavDirections action = NumOfPlayersFragmentDirections.actionNumOfPlayersFragmentToNamesFragment(playerInt, inputInt);
                         Navigation.findNavController(view).navigate(action);
                     }
                 }

@@ -2,8 +2,11 @@ package com.mobileapp.finalproject;
 /**
  * THINGS TO FINISH/ADD
  * Not allowed to enter dupe numbers -- DONE
- * send array to result fragment
+ * send array to result fragment -- DONE
  * reorganize array and confirm with user about numbers before switching to new player -- DONE
+ * Fix menu bar sizing (activity main)
+ * new menu bar icon
+ * Crash after back arrow on result (array out of bounds)
  */
 
 import android.content.Intent;
@@ -28,6 +31,7 @@ import java.util.Arrays;
 public class GameFragment extends Fragment {
     View view;
     int[][] mainPlayerNumbers;
+    String[] playerNames;
     int incrementPlayer = 1, incrementNumber = 1, numPlayers = 2, numNumbers = 1, displayMode = 1; // 1 = main display | 0 = confirm display
     Button enterButton, confirm_sendButton, confirm_rejectButton;
     EditText enterNumbers;
@@ -141,10 +145,12 @@ public class GameFragment extends Fragment {
         confirm_confirmMessage.setAlpha(0);
         confirm_playerNumbers.setAlpha(0);
 
+        playerNames = new String[1];
 
         try {
             numPlayers = GameFragmentArgs.fromBundle(requireArguments()).getPlayerNum();
             numNumbers = GameFragmentArgs.fromBundle(requireArguments()).getInputNum();
+            playerNames = GameFragmentArgs.fromBundle(requireArguments()).getPlayerNames();
         } catch (Exception e) {
             Log.d("DEBUG", "EXCEPTION: NO BUNDLE");
         }
@@ -157,6 +163,7 @@ public class GameFragment extends Fragment {
             temp = temp + "X ";
         }
         playerNumberDisplay.setText(temp);
+        playerName.setText(playerNames[0]);
         //-----------
 
 
@@ -193,13 +200,13 @@ public class GameFragment extends Fragment {
                                 i++;
                             }
                         }
-                        NavDirections action = GameFragmentDirections.actionGameFragmentToResultFragment(tempArray, numPlayers, numNumbers);
+                        NavDirections action = GameFragmentDirections.actionGameFragmentToResultFragment(tempArray, numPlayers, numNumbers, playerNames);
                         Navigation.findNavController(view).navigate(action);
                     } else { // If its not on the last player
                         incrementPlayer++;
                         incrementNumber = 1;
-                        String temp = "Player " + String.valueOf(incrementPlayer);
-                        playerName.setText(temp);
+                        String temp;
+                        playerName.setText(playerNames[incrementPlayer-1]);
                         temp = "";
                         for (int i = 0; i < numNumbers; i++) {
                             temp = temp + "X ";

@@ -22,6 +22,7 @@ public class ResultFragment extends Fragment {
     View view;
     int numPlayers = 1, numNumbers = 1, iterator = 0;
     int[] tempArray = new int[1]; int[][] mainPlayerNumbers;
+    String[] playerNames;
 
     public static int unique(int mat[][], int R, int C) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -62,10 +63,13 @@ public class ResultFragment extends Fragment {
         TextView winningPlayerText = view.findViewById(R.id.mainWinText);
         TextView winningNumberText = view.findViewById(R.id.winningNumberText);
         //Get main number list and recreate the 2-d array
+        playerNames = new String[1];
         try {
             tempArray = ResultFragmentArgs.fromBundle(requireArguments()).getMainPlayerNums();
             numPlayers = ResultFragmentArgs.fromBundle(requireArguments()).getNumPlayers();
             numNumbers = ResultFragmentArgs.fromBundle(requireArguments()).getNumNumbers();
+            playerNames = ResultFragmentArgs.fromBundle(requireArguments()).getPlayerNames();
+
         } catch (Exception e) {
             Log.d("DEBUG - RESULT FRAGMENT", "EXCEPTION: NO BUNDLE");
         }
@@ -90,7 +94,7 @@ public class ResultFragment extends Fragment {
             Log.d("DEBUG - RESULT FRAGMENT","Player Who Won: " + String.valueOf(ans[0] + 1) + " With Number: " + String.valueOf(mainPlayerNumbers[ans[0]][ans[1]]));
 
             //Display the winning player and number:
-            mainText = "Winning Player: " + String.valueOf(ans[0] + 1);
+            mainText = "Winning Player: " + playerNames[ans[0]];
             subText = "The winning number was: " + String.valueOf(mainPlayerNumbers[ans[0]][ans[1]]);
         }
         //Change the display text
@@ -101,7 +105,7 @@ public class ResultFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.d("DEBUG - RESULT FRAGMENT", "SCOREBOARD BUTTON HIT");
-                NavDirections action = ResultFragmentDirections.actionResultFragmentToScoreboardFragment(tempArray, numPlayers, numNumbers);
+                NavDirections action = ResultFragmentDirections.actionResultFragmentToScoreboardFragment(tempArray, numPlayers, numNumbers, playerNames);
                 Navigation.findNavController(view).navigate(action);
             }
         });
