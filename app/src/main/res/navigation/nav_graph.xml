@@ -87,8 +87,8 @@
     <fragment
         android:id="@+id/scoreboardFragment"
         android:name="com.mobileapp.finalproject.ScoreboardFragment"
-        android:label="fragment_scoreboard"
-        tools:layout="@layout/fragment_scoreboard" >
+        android:label="Scoreboard"
+        tools:layout="@layout/fragment_scoreboard">
         <argument
             android:name="mainPlayerNums"
             app:argType="integer[]" />
@@ -101,12 +101,15 @@
         <argument
             android:name="playerNames"
             app:argType="string[]" />
+        <action
+            android:id="@+id/action_scoreboardFragment_to_newGameFragment"
+            app:destination="@id/newGameFragment" />
     </fragment>
     <fragment
         android:id="@+id/namesFragment"
         android:name="com.mobileapp.finalproject.NamesFragment"
-        android:label="fragment_names"
-        tools:layout="@layout/fragment_names" >
+        android:label="Names"
+        tools:layout="@layout/fragment_names">
         <action
             android:id="@+id/action_namesFragment_to_gameFragment"
             app:destination="@id/gameFragment" />

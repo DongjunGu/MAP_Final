@@ -6,7 +6,8 @@
     <string name="menuBar_newGame">New Game</string>
     <string name="menuBar_help">Help</string>
     <string name="menuBar_about">About</string>
-
+    <!-- Scoreboard Fragment -->
+    <string name="scoreBoard">Scoreboard</string>
     <!-- Title Fragment -->
     <string name="newGameButton">New Game</string>
     <string name="helpButton">Help</string>

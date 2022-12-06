@@ -9,7 +9,8 @@
         <entry key="app/src/main/res/layout/fragment_names.xml" value="0.4053442028985507" />
         <entry key="app/src/main/res/layout/fragment_num_of_players.xml" value="0.4053442028985507" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.4053442028985507" />
-        <entry key="app/src/main/res/layout/fragment_scoreboard.xml" value="0.46510416666666665" />
+        <entry key="app/src/main/res/layout/fragment_scoreboard.xml" value="0.5786819458007812" />
+        <entry key="app/src/main/res/menu/menu_toolbar.xml" value="0.23055555555555557" />
       </map>
     </option>
   </component>

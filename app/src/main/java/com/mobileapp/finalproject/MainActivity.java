@@ -25,17 +25,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         NavHostFragment navHostFragment = (NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         NavController navController = navHostFragment.getNavController();
         //the above code gets a reference to the navigation controller from the navigation host
+        /** Gets rid of the arrow
         AppBarConfiguration.Builder builder = new AppBarConfiguration.Builder(navController.getGraph());
         AppBarConfiguration appBarConfiguration = builder.build();
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
-
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
+
+
+        //setActionBar(toolbar);
 
         bottomNavigationView.setBackgroundColor(-9000000);
 
